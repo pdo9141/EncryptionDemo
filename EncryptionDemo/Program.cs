@@ -154,6 +154,16 @@ namespace EncryptionDemo
 
         private static void HybridEncryptionTest()
         {
+            // Utilize both Symmetric and Asymmetric Encryption to encypt large text files
+            // Encryption:
+            //      i.Generate a random key of the length required for symmetrical encryption technique such as AES / Rijndael or similar.
+            //      ii.Encrypt your data using AES / Rijndael using that random key generated in part i.
+            //      iii.Use RSA encryption to asymmetrically encrypt the random key generated in part i.
+            //      Publish(eg write to a file) the outputs from parts ii.and iii.: the AES-encrypted data and the RSA-encrypted random key.
+            //  Decryption:
+            //      i.Decrypt the AES random key using your private RSA key.
+            //      ii. Decrypt the original data using the decrypted AES random key
+
             Console.WriteLine("Starting Hybrid Encryption");
             
             Console.WriteLine("");
