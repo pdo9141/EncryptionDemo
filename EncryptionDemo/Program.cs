@@ -163,8 +163,11 @@ namespace EncryptionDemo
             //  Decryption:
             //      i.Decrypt the AES random key using your private RSA key.
             //      ii. Decrypt the original data using the decrypted AES random key
+            //  If we want the benefits of both types of encryption algorithms, the general idea is to create a random symmetric key to encrypt the data, 
+            //  then encrypt that key asymmetrically.Once the key is asymmetrically encrypted, we add it to the encrypted message.The receiver gets the key, 
+            //  decrypts it with their private key, and uses it to decrypt the message.
 
-            Console.WriteLine("Starting Hybrid Encryption");
+          Console.WriteLine("Starting Hybrid Encryption");
             
             Console.WriteLine("");
         }
